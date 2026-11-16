@@ -1,0 +1,136 @@
+/* Base Reset & Core Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  background-color: #f4f6f9;
+  color: #333333;
+}
+
+/* Container Split Layout */
+.container {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+
+/* Tablet & Desktop Layout shift */
+@media (min-width: 768px) {
+  .container {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+  }
+}
+
+/* Card Styling for Form and Feedback List */
+.form, 
+.feedbackList {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+}
+
+/* Typography Elements */
+.form-title {
+  margin-top: 0;
+  margin-bottom: 24px;
+  font-size: 24px;
+  font-weight: 700;
+  color: #1a202c;
+  letter-spacing: -0.5px;
+}
+
+.feedbackList h3 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 20px;
+  color: #1a202c;
+  border-bottom: 2px solid #edf2f7;
+  padding-bottom: 10px;
+}
+
+/* Form Controls */
+.form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  color: #4a5568;
+}
+
+.form input[type="text"],
+.form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #cbd5e0;
+  border-radius: 6px;
+  font-size: 15px;
+  background-color: #fff;
+  box-sizing: border-box;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* Input Focus States */
+.form input[type="text"]:focus,
+.form textarea:focus {
+  outline: none;
+  border-color: #3182ce;
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.15);
+}
+
+/* Interactive Action Button */
+.formButton {
+  width: 100%;
+  padding: 12px;
+  background-color: #3182ce;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.formButton:hover {
+  background-color: #2b6cb0;
+}
+
+.formButton:active {
+  background-color: #2c5282;
+}
+
+/* Rendered Feedback List Elements */
+.feedbackEntry {
+  background-color: #f7fafc;
+  padding: 16px;
+  border-radius: 8px;
+  border-left: 4px solid #3182ce;
+  margin-bottom: 16px;
+}
+
+.feedbackEntry:last-child {
+  margin-bottom: 0;
+}
+
+.feedbackEntry p {
+  margin: 6px 0;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.feedbackEntry strong {
+  color: #4a5568;
+  margin-right: 6px;
+}
